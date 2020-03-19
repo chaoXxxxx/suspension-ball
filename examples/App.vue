@@ -1,0 +1,53 @@
+<template>
+  <div id="app">
+    <suspension-ball @eventEmit="eventEmit" @positionEmit="positionEmit" :zIndex="1002" :distance="{top: 70, left: 10, right: 25, bottom: 10}" :init="{top: 80}"><div class="float_ball">悬浮</div></suspension-ball>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import { Position } from './types/app'
+import SuspensionBall from '../src/components/SuspensionBall.vue'
+
+@Component({
+  components: {
+    SuspensionBall
+  }
+})
+export default class App extends Vue {
+  private eventEmit(): void {
+    return
+  }
+
+  private positionEmit(position: Position): void {
+    console.log(`top => ${position.top}  left => ${position.left}`)
+  }
+}
+</script>
+
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  
+  .float_ball{
+    height: 50px;
+    width: 50px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    align-content:center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #999;
+    background-color: #fff;
+    .float_ball_text{
+      width: 100%;
+      font-size:12px;
+    }
+  }
+}
+</style>
