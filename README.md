@@ -12,6 +12,8 @@
     :init="{top: 80}">
         <div class="float_ball">悬浮</div>
 </suspension-ball>
+
+import suspensionBall from 'suspensionBall'
 ```
 
 ### typescript
