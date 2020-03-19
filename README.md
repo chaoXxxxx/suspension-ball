@@ -1,6 +1,29 @@
 # suspension-ball
 
-## 可滑动的悬浮球
+## 可滑动的悬浮球,自动吸附边缘,类似ios的辅助触控
+
+### 使用
+```
+npm install suspensionBall -S
+
+import Vue from 'vue'
+import suspensionBall from 'suspensionBall'
+Vue.use(suspensionBall)
+```
+
+### 参数
+名 | 类型 | 默认 | 说明
+-|-|-|-
+zIndex | number | 1001 | 组件层级 |
+init | object | { top: 0,left: 0 } | 初始化位置 |
+distance | object | { top: 10, left: 10, right: 10, bottom: 10 } | 距离边部位置（拖拽超出某范围后会返回指定的距离） |
+
+### 事件
+```
+@eventEmit 没有返回值,在点击组件事会发送点击事件
+
+@positionEmit 返回值组件距离值left,top
+```
 
 ### template
 ```
@@ -75,6 +98,4 @@ export default class App extends Vue {
 ```
 
 ### 源码
-```
-[suspension-ball](https://gitee.com/ChaoXxxx/suspension-ball). 
-```
+[suspension-ball](https://gitee.com/ChaoXxxx/suspension-ball)
