@@ -1,6 +1,6 @@
 {
   "name": "suspension-ball",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "license": "MIT",
   "description": "可滑动的悬浮球,自动吸附边缘,类似ios的辅助触控,支持pc、手机端",
