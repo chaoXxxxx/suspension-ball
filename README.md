@@ -7,7 +7,7 @@
 npm install suspension-ball -S
 
 import Vue from 'vue'
-import suspensionBall from 'suspensionBall'
+import suspensionBall from 'suspension-ball'
 Vue.use(suspensionBall)
 ```
 
