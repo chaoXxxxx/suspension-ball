@@ -1,8 +1,6 @@
 <template>
   <div :class="['suspension-ball', istransition ? 'active' : '']" ref="moveDiv" @mousedown="down($event)" @touchstart="down($event)" @mousemove="move($event)" @touchmove="move($event)" @touchend="end($event)" :style="{zIndex: zIndex}">
-    <div ref="moveDiv" class="content">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
