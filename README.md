@@ -4,7 +4,7 @@
 
 ### 使用
 ```
-npm install suspensionBall -S
+npm install suspension-ball -S
 
 import Vue from 'vue'
 import suspensionBall from 'suspensionBall'
