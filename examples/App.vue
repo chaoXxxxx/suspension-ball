@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <suspension-ball @eventEmit="eventEmit" @positionEmit="positionEmit" :zIndex="1002" :distance="{top: 70, left: 10, right: 25, bottom: 10}" :init="{top: 80}"><div class="float_ball">悬浮</div></suspension-ball>
+    <suspension-ball @eventEmit="eventEmit" @positionEmit="positionEmit" :zIndex="1002" :distance="{top: 70, left: 10, right: 25, bottom: 10}" :init="{top: 80}"><div class="float_ball">悬浮1</div></suspension-ball>
+    <suspension-ball @eventEmit="eventEmit" @positionEmit="positionEmit" :zIndex="1002" :distance="{top: 10, left: 10, right: 10, bottom: 10}" :init="{top: 10, left: 10}"><div class="float_ball">悬浮2</div></suspension-ball>
   </div>
 </template>
 
@@ -16,7 +17,7 @@ import SuspensionBall from '../src/components/SuspensionBall.vue'
 })
 export default class App extends Vue {
   private eventEmit(): void {
-    return
+    return console.log(`eventEmit`)
   }
 
   private positionEmit(position: Position): void {

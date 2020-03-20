@@ -51,8 +51,6 @@ export default class SuspensionBall extends Vue {
   private dy: number = 0
   private xPum: number = 0
   private yPum: number = 0
-  private isxuanfu: boolean = true
-  private isShow: boolean = true
   private width: number = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
   private height: number = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
   private istransition: boolean = false
@@ -212,18 +210,13 @@ export default class SuspensionBall extends Vue {
 <style scoped lang="scss">
 .suspension-ball {
   display: flex;
+  justify-content: center;
+  align-items: center;
   /* 如果碰到滑动问题，1.3 请检查 z-index。z-index需比web大一级*/
   position: fixed;
   touch-action: none;
   user-select: none;
   background-color: transparent;
-  .content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   &.active {
     transition: all 0.2s ease-in;
   }
